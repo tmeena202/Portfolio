@@ -1,0 +1,206 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.aboutText {
+    text-align: left;
+}
+
+.aboutText h2 {
+    color: var(--text-primary);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.aboutText p {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.funFacts {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow-light);
+}
+
+.funFacts h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.funFacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.funFacts li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.funFacts li:hover {
+    background: var(--background-color);
+}
+
+.funFacts li svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.aboutVisual {
+    display: flex;
+    flex-direction: column;
+}
+
+.values h3 {
+    color: var(--text-primary);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.valueCard {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.valueCard:hover {
+    box-shadow: var(--shadow-medium);
+    border-color: var(--primary-color);
+}
+
+.valueIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    color: white;
+}
+
+.valueCard h4 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.valueCard p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 480px) {
+    .aboutContent {
+        gap: 2rem;
+    }
+
+    .aboutText {
+        text-align: center;
+    }
+
+    .aboutText h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .funFacts {
+        padding: 1rem;
+    }
+
+    .funFacts li {
+        font-size: 0.9rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .valueCard {
+        padding: 1rem;
+    }
+
+    .valueIcon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .aboutContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .aboutText {
+        text-align: left;
+    }
+
+    .funFacts li {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
